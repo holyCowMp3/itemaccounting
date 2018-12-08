@@ -1,0 +1,99 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+	<meta charset="utf-8" />
+	<!--<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">-->
+	<!--<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Система єдиного обліку військового майна</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link th:href="@{assets/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{assets/css/animate.min.css}" rel="stylesheet"/>
+    <link th:href="@{assets/css/paper-dashboard.css}" rel="stylesheet"/>
+    <link th:href="@{assets/css/demo.css}" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link th:href="@{assets/css/themify-icons.css}" rel="stylesheet">
+
+</head>
+<body>
+
+<div th:replace="/fragments/navbar :: navbar(${user})"></div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12">
+        <div class="card">
+            <div class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="icon-big icon-warning text-center">
+                            <a th:href = "@{/start}"> <i class="ti-camera"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-block">
+                    <hr>
+                    <div class="center-block">
+                        <i class="ti-reload"></i> Почати роботу
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-sm-12">
+        <div class="card" th:href = "@{/table}" >
+            <div class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="icon-big icon-warning text-center">
+                            <a th:href = "@{/all}"> <i class="ti-files"></i></a>
+                        </div>
+                    </div>
+                    </div>
+                <div class="center-block">
+                    <hr>
+                    <div class="center-block">
+                        <i class="ti-reload"></i> Почати інвентаризацію
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<div th:replace="/fragments/navbar :: footer"></div>
+</body>
+
+    <!--   Core JS Files   -->
+    <script th:src="@{/assets/js/jquery.min.js}" type="text/javascript"></script>
+	<script th:src="@{/assets/js/bootstrap.min.js}" type="text/javascript"></script>
+
+	<!--  Checkbox, Radio & Switch Plugins -->
+	<script th:src="@{/assets/js/bootstrap-checkbox-radio.js}"></script>
+
+	<!--  Charts Plugin -->
+	<script th:src="@{/assets/js/chartist.min.js}"></script>
+
+    <!--  Notifications Plugin    -->
+    <script th:src="@{/assets/js/bootstrap-notify.js}"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
+	<script th:src="@{/assets/js/paper-dashboard.js}"></script>
+
+
+
+
+</html>
